@@ -29,7 +29,7 @@ $buku = $rows;
 
 <body>
 
-  <h1>Buku Mimin</h1>
+  <h1>Buku Mimin </h1>
 
   <table border="1" cellpading="10" cellspacing="0">
     <tr>
