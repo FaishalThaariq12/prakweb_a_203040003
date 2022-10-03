@@ -24,21 +24,21 @@ $buku = $rows;
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
   <title>Buku</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <h1>Buku Mimin </h1>
-
+  <h1>Buku Mimin</h1>
+  <a href="tambah.php">Tambah Buku</a>
   <table border="1" cellpading="10" cellspacing="0">
     <tr>
-      <th>NO</th>
+      <th>#</th>
       <th>Gambar</th>
-      <th>Nama</th>
-      <th>Penulis</th>
-      <th>Harga</th>
+      <th>Nama Buku</th>
+      <th>Penulis Buku</th>
+      <th>Harga Buku</th>
       <th>#</th>
     </tr>
     <?php $i = 1; ?>
@@ -46,26 +46,18 @@ $buku = $rows;
       <tr>
         <td><?= $i++; ?></td>
         <td><img src="img/<?= $row["gambar"]; ?>" alt="" width="100"></td>
-        <td><?= $row["nama"]; ?> </td>
+        <td><?= $row["nama"]; ?></td>
         <td><?= $row["penulis"]; ?></td>
         <td><?= $row["harga"]; ?> </td>
         <td>
           <center>
-            <a href="ubah.php?id=<?= $row["id"]; ?>" onclick="return confirm('Ubah Data??')" class="btn btn-primary mt-4">Ubah</a>
-            <a href="tambah.php?id=<?= $row["id"]; ?>" onclick="return confirm('Tambah Data??')" class="btn btn-danger mt-3">tambah</a>
-            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data??')" class="btn btn-danger mt-3">Hapus</a>
+            <a href="ubah.php?id=<?= $row["id"]; ?>" onclick="return confirm('Ubah Data??')">Ubah</a>
+            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data??')">Hapus</a>
           </center>
         </td>
       </tr>
-
-      </td>
-      </tr>
-      <?php $i++; ?>
     <?php endforeach; ?>
   </table>
-  </div>
-
-
 
 </body>
 
