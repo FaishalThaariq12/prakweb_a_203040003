@@ -39,6 +39,7 @@ $buku = $rows;
       <th>Nama</th>
       <th>Penulis</th>
       <th>Harga</th>
+      <th>#</th>
     </tr>
     <?php $i = 1; ?>
     <?php foreach ($buku as $row) : ?>
@@ -48,7 +49,13 @@ $buku = $rows;
         <td><?= $row["nama"]; ?> </td>
         <td><?= $row["penulis"]; ?></td>
         <td><?= $row["harga"]; ?> </td>
-
+        <td>
+          <center>
+            <a href="ubah.php?id=<?= $row["id"]; ?>" onclick="return confirm('Ubah Data??')" class="btn btn-primary mt-4">Ubah</a>
+            <a href="tambah.php?id=<?= $row["id"]; ?>" onclick="return confirm('Tambah Data??')" class="btn btn-danger mt-3">tambah</a>
+            <a href="hapus.php?id=<?= $row["id"]; ?>" onclick="return confirm('Hapus Data??')" class="btn btn-danger mt-3">Hapus</a>
+          </center>
+        </td>
       </tr>
 
       </td>
