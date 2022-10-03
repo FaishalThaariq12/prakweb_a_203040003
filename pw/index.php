@@ -34,11 +34,11 @@ $buku = $rows;
 
   <table border="1" cellpading="10" cellspacing="0">
     <tr>
-      <th>#</th>
+      <th>NO</th>
       <th>Gambar</th>
-      <th>nama</th>
+      <th>Nama</th>
       <th>Penulis</th>
-      <th>harga</th>
+      <th>Harga</th>
     </tr>
     <?php $i = 1; ?>
     <?php foreach ($buku as $row) : ?>
@@ -48,9 +48,17 @@ $buku = $rows;
         <td><?= $row["nama"]; ?> </td>
         <td><?= $row["penulis"]; ?></td>
         <td><?= $row["harga"]; ?> </td>
+
       </tr>
+
+      </td>
+      </tr>
+      <?php $i++; ?>
     <?php endforeach; ?>
   </table>
+  </div>
+
+
 
 </body>
 
