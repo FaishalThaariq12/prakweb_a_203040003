@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'php/function.php';
+require 'function.php';
 
 // jika tidak ada id di url
 if (!isset($_GET['id'])) {

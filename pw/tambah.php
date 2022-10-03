@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'php/function.php';
+require 'function.php';
 
 // cek apakah tombol tambah sudah ditekan
 if (isset($_POST['tambah'])) {
