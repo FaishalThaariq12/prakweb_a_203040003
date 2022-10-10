@@ -1,2 +1,2 @@
 <h1>About Me</h1>
-<p>Halo, Nama saya <?= $data['nama']; ?>, Umur saya <?= $data['umur']; ?> tahun, saya adalah <?= $data['pekerjaan']; ?>.</p>
+<p>Halo, nama saya <?= $data['nama']; ?>, umur saya <?= $data['umur']; ?> tahun, saya adalah <?= $data['pekerjaan']; ?>.</p>
