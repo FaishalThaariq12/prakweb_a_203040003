@@ -1,1 +1,2 @@
-<h1>My Page</h1>
+<!DOCTYPE html>
+<h1>My Pages</h1>
