@@ -1,7 +1,15 @@
-<div class="container mt-5">
+<div class="container mt-3">
 
   <div class="row">
     <div class="col-6">
+
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Tambah Data Mahasiswa
+      </button>
+
+      <br><br>
+
       <h3>Daftar Mahasiswa</h3>
 
       <ul class="list-group">
@@ -16,4 +24,58 @@
 
 
 
+    </div>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+            <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="post">
+              <div class="form-group">
+                <label for="nama" class="form-label">Nama</label>
+                <input type="text" class="form-control" id="nama" name="nama">
+              </div>
+
+              <div class="form-group">
+                <label for="nrp" class="form-label">NRP</label>
+                <input type="number" class="form-control" id="nrp" name="nrp">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email">
+              </div>
+
+              <div class="form-group">
+                <label for="jurusan">Jurusan</label>
+                <select class="form-control" id="jurusan" name="jurusan">
+                  <option value="Teknik Informatika">Teknik Informatika</option>
+                  <option value="Teknik Mesin">Teknik Mesin</option>
+                  <option value="Teknik Industri">Teknik Industri</option>
+                  <option value="Teknik Pangan">Teknik Pangan</option>
+                  <option value="Teknik Planologi">Teknik Planologi</option>
+                  <option value="Teknik Lingkungan">Teknik Lingkungan</option>
+                </select>
+              </div>
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary">Tambah Data</button>
+            </form>
+          </div>
+        </div>
+      </div>
     </div>
